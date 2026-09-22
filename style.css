@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #05060f;
+  overflow: hidden;
+  font-family: "Press Start 2P", monospace;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap {
+  position: relative;
+  width: min(100vw, calc(100vh * 0.75));
+  aspect-ratio: 3 / 4;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: #05060f;
+}
+
+/* Kontrole za ekran na dodir - prikazuju se samo na touch uređajima */
+#touch, #btn-pause { display: none; }
+body.touch #touch { display: flex; }
+body.touch #btn-pause { display: block; }
+
+#touch {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+  pointer-events: none;
+}
+.grp { display: flex; gap: 10px; }
+#touch button, #btn-pause {
+  pointer-events: auto;
+  width: 66px; height: 66px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  font-family: inherit;
+  font-size: 22px;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#touch button:active, #btn-pause:active { background: rgba(255,255,255,.35); }
+#touch button.fire {
+  width: 84px; height: 84px;
+  font-size: 12px;
+  border-color: rgba(255,158,196,.8);
+  background: rgba(255,158,196,.25);
+}
+#btn-pause {
+  position: absolute;
+  top: 44px; right: 8px;
+  width: 40px; height: 40px;
+  font-size: 12px;
+}
