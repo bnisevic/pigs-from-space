@@ -7,7 +7,11 @@ Sav tekst u igri je na srpskoj ćirilici. Igra je jedan HTML fajl + jedan JS faj
 nema slika ni zvučnih fajlova: sva grafika je piksel-art nacrtan iz koda,
 a zvuk je sintetizovan preko Web Audio API-ja.
 
-## Pokretanje
+## Igraj online
+
+**https://bnisevic.github.io/pigs-from-space/**
+
+## Pokretanje lokalno
 
 Najjednostavnije: otvori `index.html` u browseru (dvoklik).
 
